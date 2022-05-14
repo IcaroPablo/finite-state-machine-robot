@@ -18,7 +18,7 @@ Start position: (0, 0) pointing north.
         N
         ^
         |
-  W <- :^: -> E (each orientation define a state of the robot and each state has its own "movement method")
+  W <- :^: -> E (each orientation defines a state of the robot and each state has its own "movement method")
         |
         v
         S
