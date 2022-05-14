@@ -12,7 +12,7 @@ A simple finite state machine implemented to move an imaginary robot through a 5
 
 ^^^^^
 
-start position (0, 0) poiting north.
+Start position: (0, 0) pointing north.
 
   ```shell
         N
