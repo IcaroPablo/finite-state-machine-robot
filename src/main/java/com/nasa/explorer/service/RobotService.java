@@ -10,7 +10,7 @@ public class RobotService {
     @Autowired
     RobotFSM robotFSM;
 
-    public String follow(String instructions) throws Exception {
+    public String follow(String instructions) {
 
         return robotFSM.follow(instructions);
 

@@ -7,7 +7,7 @@ public interface RobotOrientation {
 
     String showSymbol();
 
-    Position move(Position currentPosition) throws Exception;
+    Position move(Position currentPosition);
 
     RobotOrientation turnLeft();
 

@@ -21,17 +21,17 @@ public class RobotController {
     RobotService robotService;
 
     @PostMapping("/mars/{instructions}")
-    public ResponseEntity<?> followInstructions(
+    public ResponseEntity<?> followInstructions (
             @PathVariable("instructions")
             @Pattern(regexp = "[LRM]{1,}")
                     String instructions) {
 
-        try {
+//        try {
             String endPosition = robotService.follow(instructions);
             return ResponseEntity.status(HttpStatus.OK).body(endPosition);
-        } catch(Exception e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("400 Bad Request");
-        }
+//        } catch(Exception e) {
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("400 Bad Request");
+//        }
 
     }
 

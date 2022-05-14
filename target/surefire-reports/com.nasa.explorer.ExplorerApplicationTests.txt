@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.nasa.explorer.ExplorerApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.82 s - in com.nasa.explorer.ExplorerApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.859 s - in com.nasa.explorer.ExplorerApplicationTests

@@ -14,4 +14,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<?> constraintViolationException(ConstraintViolationException e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("400 Bad Request");
     }
+
+    @ExceptionHandler(ArrayIndexOutOfBoundsException.class)
+    public ResponseEntity<?> arrayIndexOutOfBoundsException(ArrayIndexOutOfBoundsException e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("400 Bad Request");
+    }
 }

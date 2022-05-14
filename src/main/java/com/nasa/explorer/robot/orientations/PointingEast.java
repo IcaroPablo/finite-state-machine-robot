@@ -2,6 +2,8 @@ package com.nasa.explorer.robot.orientations;
 
 import com.nasa.explorer.robot.Position;
 
+import javax.validation.ConstraintViolationException;
+
 public class PointingEast implements RobotOrientation {
 
     private final RobotOrientation left;
@@ -18,9 +20,8 @@ public class PointingEast implements RobotOrientation {
     public String showSymbol() { return "E"; }
 
     @Override
-    public Position move(Position currentPosition) throws Exception {
+    public Position move(Position currentPosition) throws ConstraintViolationException {
         currentPosition.setX(currentPosition.getX() + 1);
-        if(currentPosition.getY() >= 5) throw new Exception();
         return currentPosition;
     }
 

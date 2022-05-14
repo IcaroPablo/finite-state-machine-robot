@@ -18,9 +18,8 @@ public class PointingSouth implements RobotOrientation {
     public String showSymbol() { return "S"; }
 
     @Override
-    public Position move(Position currentPosition) throws Exception {
+    public Position move(Position currentPosition) {
         currentPosition.setY(currentPosition.getY() - 1);
-        if(currentPosition.getY() >= 5) throw new Exception();
         return currentPosition;
     }
 

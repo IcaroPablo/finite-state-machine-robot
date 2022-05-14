@@ -12,15 +12,14 @@ public class RobotFSM {
 
     public RobotFSM() {
 
-        this.currentPosition = new Position(0, 0);
+        this.currentPosition = new Position();
         this.currentOrientation = new PointingNorth();
 
     }
 
-    public String follow(String instructions) throws Exception {
+    public String follow(String instructions) {
 
         for (int i = 0; i < instructions.length(); i++) {
-
             if(instructions.charAt(i) == (("M").charAt(0))) currentPosition = currentOrientation.move(currentPosition);
             else if(instructions.charAt(i) == (("L").charAt(0))) currentOrientation = currentOrientation.turnLeft();
             else if(instructions.charAt(i) == (("R").charAt(0))) currentOrientation = currentOrientation.turnRight();
@@ -33,7 +32,7 @@ public class RobotFSM {
 
     }
 
-    public void reset() {
+    private void reset() {
 
         this.currentPosition.setX(0);
         this.currentPosition.setY(0);
