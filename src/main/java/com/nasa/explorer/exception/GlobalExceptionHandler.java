@@ -10,13 +10,9 @@ import javax.validation.ConstraintViolationException;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<?> constraintViolationException(ConstraintViolationException e) {
+    @ExceptionHandler({ConstraintViolationException.class, InvalidInstructionException.class})
+    public ResponseEntity<String> badRequestHandler(RuntimeException e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("400 Bad Request");
     }
 
-    @ExceptionHandler(ArrayIndexOutOfBoundsException.class)
-    public ResponseEntity<?> arrayIndexOutOfBoundsException(ArrayIndexOutOfBoundsException e) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("400 Bad Request");
-    }
 }

@@ -1,13 +1,13 @@
-package com.nasa.explorer.robot.orientations;
+package com.nasa.explorer.orientationStates;
 
 
-import com.nasa.explorer.robot.Position;
+import com.nasa.explorer.config.RobotPosition;
 
 public interface RobotOrientation {
 
     String showSymbol();
 
-    Position move(Position currentPosition);
+    RobotPosition move(RobotPosition currentPosition);
 
     RobotOrientation turnLeft();
 

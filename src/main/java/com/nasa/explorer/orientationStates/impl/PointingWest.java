@@ -1,6 +1,7 @@
-package com.nasa.explorer.robot.orientations;
+package com.nasa.explorer.orientationStates.impl;
 
-import com.nasa.explorer.robot.Position;
+import com.nasa.explorer.config.RobotPosition;
+import com.nasa.explorer.orientationStates.RobotOrientation;
 
 public class PointingWest implements RobotOrientation {
 
@@ -18,7 +19,7 @@ public class PointingWest implements RobotOrientation {
     public String showSymbol() { return "W"; }
 
     @Override
-    public Position move(Position currentPosition) {
+    public RobotPosition move(RobotPosition currentPosition) {
         currentPosition.setX(currentPosition.getX() - 1);
         return currentPosition;
     }

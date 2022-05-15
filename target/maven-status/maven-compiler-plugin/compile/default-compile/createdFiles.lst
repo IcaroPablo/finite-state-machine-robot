@@ -1,11 +1,5 @@
-com/nasa/explorer/robot/orientations/PointingNorth.class
-com/nasa/explorer/robot/orientations/PointingSouth.class
-com/nasa/explorer/robot/orientations/RobotOrientation.class
 com/nasa/explorer/controller/RobotController.class
-com/nasa/explorer/robot/Position.class
 com/nasa/explorer/exception/GlobalExceptionHandler.class
 com/nasa/explorer/service/RobotService.class
-com/nasa/explorer/robot/RobotFSM.class
-com/nasa/explorer/robot/orientations/PointingWest.class
 com/nasa/explorer/ExplorerApplication.class
-com/nasa/explorer/robot/orientations/PointingEast.class
+com/nasa/explorer/config/RobotPosition.class

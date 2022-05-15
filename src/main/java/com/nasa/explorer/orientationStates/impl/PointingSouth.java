@@ -1,6 +1,7 @@
-package com.nasa.explorer.robot.orientations;
+package com.nasa.explorer.orientationStates.impl;
 
-import com.nasa.explorer.robot.Position;
+import com.nasa.explorer.config.RobotPosition;
+import com.nasa.explorer.orientationStates.RobotOrientation;
 
 public class PointingSouth implements RobotOrientation {
 
@@ -18,7 +19,7 @@ public class PointingSouth implements RobotOrientation {
     public String showSymbol() { return "S"; }
 
     @Override
-    public Position move(Position currentPosition) {
+    public RobotPosition move(RobotPosition currentPosition) {
         currentPosition.setY(currentPosition.getY() - 1);
         return currentPosition;
     }
