@@ -1,5 +1,9 @@
 package com.nasa.explorer.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class RobotPosition {
 
     private final Integer[] rangeX;
@@ -8,10 +12,11 @@ public class RobotPosition {
     private Integer x;
     private Integer y;
 
-    public RobotPosition() {
+    public RobotPosition(@Value("${robot.xFieldRange}") Integer maxXRange,
+                         @Value("${robot.xFieldRange}") Integer maxYRange) {
 
-        this.rangeX = new Integer[5];
-        this.rangeY = new Integer[5];
+        this.rangeX = new Integer[maxXRange];
+        this.rangeY = new Integer[maxYRange];
 
         for (int i = 0; i < rangeX.length; i++) { rangeX[i] = i; }
         for (int i = 0; i < rangeY.length; i++) { rangeY[i] = i; }

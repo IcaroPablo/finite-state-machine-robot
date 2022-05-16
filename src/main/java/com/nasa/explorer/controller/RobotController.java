@@ -18,7 +18,7 @@ import javax.validation.constraints.Pattern;
 public class RobotController {
 
     @Autowired
-    RobotService robotService;
+    private RobotService robotService;
 
     @PostMapping("/mars/{instructions}")
     public ResponseEntity<?> followInstructions (

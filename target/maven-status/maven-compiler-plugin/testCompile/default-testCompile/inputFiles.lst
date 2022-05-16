@@ -1,1 +1,4 @@
+/home/treebeard/finite-state-machine-robot/src/test/java/com/nasa/explorer/controller/RobotControllerUnitTest.java
+/home/treebeard/finite-state-machine-robot/src/test/java/com/nasa/explorer/controller/RobotControllerIntegrationTest.java
+/home/treebeard/finite-state-machine-robot/src/test/java/com/nasa/explorer/service/RobotServiceTest.java
 /home/treebeard/finite-state-machine-robot/src/test/java/com/nasa/explorer/ExplorerApplicationTests.java

@@ -4,12 +4,14 @@ import com.nasa.explorer.config.RobotPosition;
 import com.nasa.explorer.exception.InvalidInstructionException;
 import com.nasa.explorer.orientationStates.RobotOrientation;
 import com.nasa.explorer.orientationStates.impl.PointingNorth;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class RobotService {
 
-    private RobotPosition currentPosition = new RobotPosition();
+    @Autowired
+    private RobotPosition currentPosition;
     private RobotOrientation currentOrientation = new PointingNorth();
 
     public String follow(String instructions) {
